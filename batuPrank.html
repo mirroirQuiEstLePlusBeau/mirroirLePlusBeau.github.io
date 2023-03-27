@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Name Check</title>
+  <style>
+    .text {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+  <h1>What is your name?</h1>
+  <input type="text" id="nameInput" placeholder="Mirroir dit moi qui est le plus beau">
+  <button onclick="checkName()">Submit</button>
+  <div id="container"></div>
+
+  <script>
+    function checkName() {
+      const name = document.getElementById("nameInput").value;
+      const container = document.getElementById("container");
+      container.innerHTML = "";
+
+      if (name.toLowerCase() === "Batu") {
+        for (let i = 0; i < 300; i++) {
+          const textElement = document.createElement("span");
+          textElement.className = "text";
+          textElement.innerHTML = "Batu gay";
+          container.appendChild(textElement);
+        }
+      }
+    }
+  </script>
+</body>
+</html>
+</html>
